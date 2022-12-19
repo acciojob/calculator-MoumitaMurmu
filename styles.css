@@ -1,2 +1,30 @@
+body{
+    padding: 1.5em;
+}
 
-/* Your CSS Code here. */
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .1em;
+}
+input {
+    width: 100%;
+    padding: 1.5em 0;
+}
+button{
+    padding: 1.5em 1em;
+    font-size: 1.3em;
+
+    background: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: .7;
+}

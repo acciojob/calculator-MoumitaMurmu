@@ -1,18 +1,22 @@
-var allButtons = document.querySelectorAll("button");
-var input = document.querySelector("#input");
+//your code here
+let input = document.getElementById('input');
+let expression = "";
+function solve(e) {
+    // console.log(e)
+    if (e === 'ans') {
+        // evaluate the expression
+        let result = eval(expression);
+        console.log(result);
+        input.value = result;
+    }
 
-for (const button of allButtons) {
-  button.addEventListener("click", changeInput);
-}
-
-function changeInput(event) {
-  let clickedText = event.target.innerText;
-
-  if (clickedText == "AC") {
-    input.value = "";
-  } else if (clickedText == "=") {
-    input.value = eval(input.value);
-  } else {
-    input.value += clickedText;
-  }
+    else if (e === 'clear') {
+        expression = "";
+        input.value = ""
+    }
+    else {
+        expression += e;
+        console.log(expression)
+        input.value = expression;
+    }
 }
